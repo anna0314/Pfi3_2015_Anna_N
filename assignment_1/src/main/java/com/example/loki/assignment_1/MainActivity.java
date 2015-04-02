@@ -14,6 +14,10 @@ import java.util.Random;
 
 public class MainActivity extends ActionBarActivity {
 
+
+    // Hej!
+    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
