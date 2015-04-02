@@ -16,12 +16,24 @@ public class MainActivity extends ActionBarActivity {
 
 
     // Hej!
-    
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);}
+        setContentView(R.layout.activity_main);
+
+       Button button = (Button) findViewById(R.id.button);
+       button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Log.i("MyAPP", "Button pressed");
+                TextView text = (TextView) findViewById(R.id.textView2);
+                String [] quotes = getResources().getStringArray(R.array.movies);
+                Random rand = new Random();
+                text.setText(quotes[rand.nextInt(quotes.length)]);
+        }
+    });
+    }
 
     protected void onStart() {
         Log.i("MyAPP", "started");
@@ -54,14 +66,6 @@ public class MainActivity extends ActionBarActivity {
         // The activity is about to be destroyed.
     }
 
-    public void onClick(View v) {
-        Log.i("MyAPP", "Button pressed");
-        Button button = (Button) findViewById(R.id.button);
-        TextView text = (TextView) findViewById(R.id.textView2);
-        String [] quotes = getResources().getStringArray(R.array.movies);
-        Random rand = new Random();
-        text.setText(quotes[rand.nextInt(quotes.length)]);
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
