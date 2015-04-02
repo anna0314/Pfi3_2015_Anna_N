@@ -20,6 +20,7 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);}
 
     protected void onStart() {
+        Log.i("MyAPP", "started")
        super.onStart();
          //The activity is about to become visible.
     }
