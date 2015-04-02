@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Assignment_1</string>
+    <string name="movie_quotes">Movie Quotes!</string>
+    <string name="action_settings">Settings</string>
+    <string name="next_quote">Next quote</string>
+    <string name="famous_quotes">Famous Quotes</string>
+
+    <string name="star_wars">"May the Force be with you." \n-Star Wars</string>
+    <string name="gladiator">"What we do in life echoes in eternity." \n-Gladiator</string>
+    <string name="shaw_shank">"Get busy living, or get busy dying. \n-The Shawshank Redemption</string>
+    <string name="sixth_sense">"I see dead people." \n-The Sixth Sense</string>
+    <string name="terminator">"I'll be back." \n-Terminator</string>
+    <string name="dark_knight">"If you are good at something, don't do it for free." \n-The Dark Knight</string>
+    <string name="fight_club">"The things you own end up owning you." \n-Fight Club</string>
+    <string name="spirited_away">"Once you do something, you never forget. Even if you can't remember." \n-Spirited Away</string>
+
+    <string-array name="movies">
+        <item>@string/star_wars</item>
+        <item>@string/gladiator</item>
+        <item>@string/shaw_shank</item>
+        <item>@string/sixth_sense</item>
+        <item>@string/terminator</item>
+        <item>@string/dark_knight</item>
+        <item>@string/fight_club</item>
+        <item>@string/spirited_away</item>
+
+    </string-array>
+
+</resources>

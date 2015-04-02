@@ -1,0 +1,7 @@
+<resources>
+
+    <string name="movie_quotes">Filmcitat</string>
+    <string name="next_quote">Nästa citat</string>
+    <string name="famous_quotes">Kända citat</string>
+
+</resources>
