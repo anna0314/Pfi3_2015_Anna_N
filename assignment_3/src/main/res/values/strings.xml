@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (C) 2012 The Android Open Source Project
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
+<resources>
+    <string name="app_name">Resealternativ</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="action_refresh">Refresh</string>
+
+
+
+    <string name="hello_world">Hello world!</string>
+    <string name="fran">Från</string>
+    <string name="till">Till</string>
+    <string name="restid">Restid</string>
+    <string name="avg">Avg</string>
+    <string name="ank">Ank</string>
+    <string name="byten">Byten</string>
+
+    <string name="spinner_title">something</string>
+
+
+    <string name="malmo">Malmö</string>
+    <string name="lund">Lund</string>
+    <string name="hbg">Helsingborg</string>
+    <string name="triangeln">Malmö Triangeln</string>
+    <string name="action_settings">action_settings</string>
+
+    <string-array name="stations">
+
+        <item>Malmö C</item>
+        <item>Lund C</item>
+        <item>Helsingborg C</item>
+        <item>Malmö Triangeln</item>
+        <item>Ystad Klostret</item>
+        <item>Lund Bankgatan</item>
+        <item>Köpenhamn H</item>
+        <item>Halmstad C</item>
+        <item>Malmö Ubåtshallen</item>
+
+
+    </string-array>
+
+    <string-array name="stationsNumber">
+
+        <item>80000</item> //Malmö C
+        <item>81216</item> //Lund C
+        <item>83241</item> //Helsingborg C
+        <item>80140</item> //Malmö Triangeln
+        <item>86197</item> //Ystad Klostret
+        <item>81156</item> //Lund Bankgatan
+        <item>45007</item> //Köpenhamn H
+        <item>13003</item> //Halmstad C
+        <item>80046</item> //Malmö Ubåtshallen
+
+    </string-array>
+
+
+</resources>

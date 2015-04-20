@@ -24,7 +24,7 @@ public class BlankFragment extends Fragment implements View.OnClickListener {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_blank, container, false);
+        View v = inflater.inflate(R.layout.fragment_blank, container, false); //Fills the layout
         View reseButton = v.findViewById(R.id.imageButton2);
         reseButton.setOnClickListener(this);
         return v;

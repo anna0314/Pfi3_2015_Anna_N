@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:paddingTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:gravity="center"
+            android:textSize="@dimen/abc_text_size_small_material"
+            android:text="Detaljer"
+            android:id="@+id/childHeader"
+            android:background="#af044f68"
+            android:autoText="true" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="?android:attr/expandableListPreferredChildPaddingLeft"
+        android:textSize="@dimen/abc_text_size_small_material"
+        android:text="Malmö C"
+        android:layout_weight="1"
+        android:id="@+id/station"/>
+
+     <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/abc_text_size_small_material"
+        android:text="13:44"
+        android:layout_weight="1"
+        android:id="@+id/avg"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Helsingborg C"
+        android:textSize="@dimen/abc_text_size_small_material"
+        android:layout_weight="1"
+        android:id="@+id/station2"
+        android:paddingLeft="?android:attr/expandableListPreferredChildPaddingLeft" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="13:44"
+        android:textSize="@dimen/abc_text_size_small_material"
+        android:layout_weight="1"
+        android:id="@+id/ank"/>
+    </LinearLayout>
+
+</LinearLayout>
