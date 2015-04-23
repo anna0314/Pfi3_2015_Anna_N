@@ -4,7 +4,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="se.mah.k3.lecture_4_examples_adapter_extra.FragmentDialog"
-    android:background="#ff000000">
+    android:background="#ff000000"
+    android:id="@+id/info_planet">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
@@ -32,7 +33,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="Radius"
             android:layout_marginTop="40dp"
             android:layout_marginBottom="4dp"
@@ -44,7 +45,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="4dp"
-            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="Temp"
             android:id="@+id/tv_dialog_temp"
             android:textColor="#ffffffff" />
