@@ -21,31 +21,9 @@ public class FragmentDialog extends DialogFragment implements View.OnClickListen
         View v = inflater.inflate(R.layout.dialog, container, false);
                v.setOnClickListener(this);
 
-/*      Spinner spinner = (Spinner)v.findViewById(R.id.spinner_book_names);
-        spinner.setOnItemSelectedListener(this); //This class implements OnItemSelectedListenr
-        Spinner spinner2 = (Spinner)v.findViewById(R.id.spinner_other_book_names);
-        ArrayAdapter<Planet> planetAdapter = new ArrayAdapter<Planet>(this.getActivity(),
-                android.R.layout.simple_spinner_dropdown_item,
-                FragmentList.planets);
-        spinner2.setAdapter(planetAdapter);
-        spinner2.setOnItemSelectedListener(this);*/
         return v;
     }
-/*
-    @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-            if (parent.getId()==R.id.spinner_book_names){
-                String[] bookNames = getResources().getStringArray(R.array.books);
-                Log.i("FragmentWithSpinners","Selected position:  "+position+" and book item " +  bookNames[position]);
-                Toast.makeText(this.getActivity(),"Selected position:  "+position+" and book item " +  bookNames[position],Toast.LENGTH_LONG).show();
-            }
 
-            if (parent.getId()==R.id.spinner_other_book_names){
-                String[] isbn_numbers = getResources().getStringArray(R.array.books_isbn);
-                Log.i("FragmentWithSpinners","Selected position:  "+position+" with title " +  FragmentList.planets.get(position).getTitle());
-                Toast.makeText(this.getActivity(),"Selected position:  "+position+" with title " +  FragmentList.planets.get(position).getTitle(),Toast.LENGTH_LONG).show();
-            }
-    }*/
 
 
 
