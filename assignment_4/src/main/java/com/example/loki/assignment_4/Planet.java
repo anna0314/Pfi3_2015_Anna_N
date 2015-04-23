@@ -9,14 +9,16 @@ import java.io.Serializable;
  */
 public class Planet implements Serializable {
     String title;
+    String radius;
     String temp;
     Drawable image;
     String summary;
 
-    public Planet(String title, String temp, Drawable image, String summary) {
+    public Planet(String title, String radius, String temp, Drawable image, String summary) {
         this.title = title;
         this.temp = temp;
         this.image = image;
+        this.radius=radius;
         this.summary = summary;
 
     }
@@ -25,8 +27,8 @@ public class Planet implements Serializable {
         return temp;
     }
 
-    public void setTemp(String isbn) {
-        this.temp = isbn;
+    public void setTemp(String temp) {
+        this.temp = temp;
     }
 
     public Drawable getImage() {
@@ -43,6 +45,14 @@ public class Planet implements Serializable {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public String getRadius() {
+        return radius;
+    }
+
+    public void setRadius(String radius) {
+        this.radius = radius;
     }
 
 

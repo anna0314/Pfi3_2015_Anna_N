@@ -31,10 +31,15 @@ public class MyListAdapter extends ArrayAdapter<Planet> {
         LayoutInflater inflater = (LayoutInflater) c.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         convertView = inflater.inflate(R.layout.list_item,null);
         Planet p = planetsList.get(position);
-        TextView tv = (TextView) convertView.findViewById(R.id.tv_title);
+        TextView tv_title = (TextView) convertView.findViewById(R.id.tv_title);
+        tv_title.setText(p.getTitle());
         ImageView iv = (ImageView) convertView.findViewById(R.id.iv_bookcover);
-        tv.setText(p.getTitle());
         iv.setImageDrawable(p.getImage());
+
+
         return convertView;
+    }
+
+    public void setAdapter(MyListAdapter myAdapter) {
     }
 }

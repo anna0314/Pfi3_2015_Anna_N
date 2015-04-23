@@ -42,20 +42,23 @@ public class MainActivity extends ActionBarActivity {
 
         if (id == R.id.action_spinner) {
             FragmentManager fm = getFragmentManager();
-            FragmentSpinners fd = new FragmentSpinners();
+            FragmentDialog fd = new FragmentDialog();
             Bundle b = new Bundle();
             fd.setArguments(b);
+            fd.addToBackStack(null);
             fd.show(fm,"Dialog");
 
-/*
-            FragmentManager fm = getFragmentManager();
-            FragmentTransaction ft = fm.beginTransaction();
-            ft.replace(R.id.main_layout,new FragmentSpinners());
-            ft.addToBackStack(null);
-            ft.commit();*/
+
             return false;
         }
 
         return super.onOptionsItemSelected(item);
+    }
+    public void onBackPressed(){
+        if(getFragmentManager().getBackStackEntryCount() >0) {
+            getFragmentManager().popBackStack();
+        }else{
+            super.onBackPressed();
+        }
     }
 }
