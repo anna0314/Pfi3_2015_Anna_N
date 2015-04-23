@@ -19,12 +19,13 @@ public class FragmentDialog extends Fragment implements AdapterView.OnItemSelect
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-
-
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment__dialog, container, false);
-       /* Planet p = (Planet) getArguments().getSerializable("planet");
+        Planet p = (Planet) getArguments().getSerializable("planet");
+
+
+
+
         TextView tv_title = (TextView) v.findViewById(R.id.tv_dialog_title);
         tv_title.setText(p.getTitle());
         TextView tv_temp = (TextView) v.findViewById(R.id.tv_dialog_temp);
@@ -33,7 +34,7 @@ public class FragmentDialog extends Fragment implements AdapterView.OnItemSelect
         TextView tv_description = (TextView) v.findViewById(R.id.tv_dialog_description);
         tv_description.setText(p.getSummary());
         ImageView iv = (ImageView) v.findViewById(R.id.iv_dialog);
-        iv.setImageDrawable(p.getImage());*/
+        iv.setImageDrawable(p.getImage());
 
 
 /*        v.setOnClickListener(this);
@@ -47,12 +48,12 @@ public class FragmentDialog extends Fragment implements AdapterView.OnItemSelect
 
 
     @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+    public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id) {
         
     }
 
     @Override
-    public void onNothingSelected(AdapterView<?> parent) {
+    public void onNothingSelected(AdapterView<?> adapterView) {
 
     }
 
