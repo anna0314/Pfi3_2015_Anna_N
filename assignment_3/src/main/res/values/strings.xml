@@ -29,6 +29,10 @@ limitations under the License.
     <string name="avg">Avg</string>
     <string name="ank">Ank</string>
     <string name="byten">Byten</string>
+    <string name="avgar">Avgår</string>
+    <string name="trafik">Trafikslag</string>
+
+
 
     <string name="spinner_title">something</string>
 
@@ -50,6 +54,8 @@ limitations under the License.
         <item>Köpenhamn H</item>
         <item>Halmstad C</item>
         <item>Malmö Ubåtshallen</item>
+        <item>Malmö GA torg</item>
+
 
 
     </string-array>
@@ -65,8 +71,11 @@ limitations under the License.
         <item>45007</item> //Köpenhamn H
         <item>13003</item> //Halmstad C
         <item>80046</item> //Malmö Ubåtshallen
+        <item>80100</item> //Malmö Ga torg
+
 
     </string-array>
+    <string name="title_activity_main">MainActivity</string>
 
 
 </resources>

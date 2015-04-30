@@ -1,4 +1,4 @@
-package se.mah.k3.skaneAPI.view;
+package se.mah.k3.skaneAPI;
 
 import android.content.Context;
 import android.graphics.Typeface;
@@ -6,14 +6,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Calendar;
+import java.util.Date;
+
+
 
 import se.mah.k3.skaneAPI.R;
 import se.mah.k3.skaneAPI.model.Journey;
 import se.mah.k3.skaneAPI.model.Journeys;
+import se.mah.k3.skaneAPI.model.Station;
 import se.mah.k3.skaneAPI.xmlparser.Parser;
 import se.mah.k3.skaneAPI.xmlparser.XMLParser;
 
@@ -35,57 +41,87 @@ public class MyAdapter extends BaseExpandableListAdapter {
 
     @Override
     public int getGroupCount() {
-
         return journeyList.size();
     }
 
     @Override
     public int getChildrenCount(int groupPosition) {
-
         return 1;
     }
 
     @Override
     public View getGroupView(int groupPosition, boolean isExpanded, View convertView, ViewGroup parent) {
+
         LayoutInflater li = (LayoutInflater) this.c.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         convertView = li.inflate(R.layout.group,null);
 
-        TextView tv_avgang = (TextView)convertView.findViewById(R.id.avgang);
-        String avgang = journeyList.get(groupPosition).getDepDateTime().toString();
-        tv_avgang.setText(avgang);
+        TextView tv_trafik = (TextView)convertView.findViewById(R.id.trafik);
+        String linje = journeyList.get(groupPosition).getLineOnFirstJourney();
+        String medel = journeyList.get(groupPosition).getLineTypeName();
+        tv_trafik.setText(medel +" "+ linje);
 
-        TextView tv_ankomst = (TextView)convertView.findViewById(R.id.ankomst);
-        String ankomst = journeyList.get(groupPosition).getArrDateTime().toString();
-        tv_ankomst.setText(ankomst);
+        TextView tv_dep = (TextView)convertView.findViewById(R.id.departure);
+        String dep = journeyList.get(groupPosition).getTimeToDeparture();
+        tv_dep.setText(dep +" min");
 
-        TextView tv_restid = (TextView)convertView.findViewById(R.id.restid);
+/*        TextView tv_restid = (TextView)convertView.findViewById(R.id.restid);
         String restid = journeyList.get(groupPosition).getTravelMinutes();
-        tv_restid.setText(restid);
+        tv_restid.setText(restid+" min");*/
+
+/*        TextView tv_byten = (TextView)convertView.findViewById(R.id.byten);
+        String byten = journeyList.get(groupPosition).getNoOfChanges();
+        tv_byten.setText(byten);*/
+
+        ImageView image = (ImageView)convertView.findViewById(R.id.image);
+        int time = Integer.parseInt(dep);
+            if(time<5){
+
+            image.setVisibility(convertView.VISIBLE);
+        } else{
+            image.setVisibility(convertView.INVISIBLE);
+
+        }
 
         return convertView;
     }
 
     @Override
     public View getChildView(int groupPosition, int childPosition, boolean isLastChild, View convertView, ViewGroup parent) {
+
+        Journey journey = journeyList.get(groupPosition);
+
         LayoutInflater li = (LayoutInflater) this.c.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         convertView = li.inflate(R.layout.child,null);
 
-
-        TextView tv_station=(TextView)convertView.findViewById(R.id.station);
-        String station = journeyList.get(groupPosition).getStartStation().getStationName();
-        tv_station.setText(station);
+        TextView tv_station=(TextView)convertView.findViewById(R.id.station1);
+        Station station = journeyList.get(groupPosition).getStartStation();
+        tv_station.setText(station.getStationName());
 
         TextView tv_station2=(TextView)convertView.findViewById(R.id.station2);
-        String station2 = journeyList.get(groupPosition).getEndStation().getStationName();
-        tv_station2.setText(station2);
+        Station station2 = journeyList.get(groupPosition).getEndStation();
+        tv_station2.setText(station2.getStationName());
 
         TextView tv_avg=(TextView)convertView.findViewById(R.id.avg);
-        String avg = journeyList.get(groupPosition).getDepTimeDeviation();
-        tv_avg.setText(avg);
+        String avgTid = journeyList.get(groupPosition).getDepDateTime().get(Calendar.HOUR_OF_DAY)+
+                ":" +journeyList.get(groupPosition).getDepDateTime().get(Calendar.MINUTE);
+        tv_avg.setText(avgTid);
 
         TextView tv_ank=(TextView)convertView.findViewById(R.id.ank);
-        String ank = journeyList.get(groupPosition).getArrTimeDeviation();
-        tv_ank.setText(ank);
+        String ankTid = journeyList.get(groupPosition).getArrDateTime().get(Calendar.HOUR_OF_DAY)+
+                ":" +journeyList.get(groupPosition).getArrDateTime().get(Calendar.MINUTE);
+        tv_ank.setText(ankTid);
+
+
+        TextView tv_linje=(TextView)convertView.findViewById(R.id.linje);
+        String linje = journeyList.get(groupPosition).getLineOnFirstJourney();
+        String medel = journeyList.get(groupPosition).getLineTypeName();
+        tv_linje.setText(medel +" "+ linje);
+
+        TextView tv_delay=(TextView)convertView.findViewById(R.id.delayed);
+        String delay = journeyList.get(groupPosition).getDepTimeDeviation();
+        tv_delay.setText(delay+" min");
+
+
 
         return convertView;
     }

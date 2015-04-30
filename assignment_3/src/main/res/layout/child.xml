@@ -16,52 +16,129 @@
             android:background="#af044f68"
             android:autoText="true" />
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-    <TextView
-        android:layout_width="fill_parent"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingLeft="?android:attr/expandableListPreferredChildPaddingLeft"
-        android:textSize="@dimen/abc_text_size_small_material"
-        android:text="Malmö C"
+        android:orientation="vertical"
         android:layout_weight="1"
-        android:id="@+id/station"/>
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Buss 3"
+            android:paddingLeft="4dp"
+            android:layout_marginBottom="4dp"
+            android:gravity="right"
+            android:textSize="@dimen/abc_text_size_small_material"
+            android:id="@+id/linje"
+            android:textColor="#ffffffff" />
 
-     <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/abc_text_size_small_material"
-        android:text="13:44"
-        android:layout_weight="1"
-        android:id="@+id/avg"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/abc_text_size_small_material"
+            android:textColor="#ffffffff"
+            android:hint="Malmö C"
+            android:layout_weight="3"
+            android:paddingLeft="4dp"
+            android:id="@+id/station1"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffffff"
+            android:hint="Helsingborg C"
+            android:layout_weight="3"
+            android:gravity="left"
+            android:textSize="@dimen/abc_text_size_small_material"
+            android:id="@+id/station2"
+            android:paddingLeft="4dp"
+            android:paddingBottom ="10dp" />
+
     </LinearLayout>
 
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical"
+        android:layout_weight="1"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tid"
+            android:paddingLeft="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="right"
+            android:textSize="@dimen/abc_text_size_small_material"
+            android:id="@+id/tid"
+            android:textColor="#ffffffff" />
+
 
     <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Helsingborg C"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+        android:layout_marginLeft="15dp"
         android:textSize="@dimen/abc_text_size_small_material"
-        android:layout_weight="1"
-        android:id="@+id/station2"
-        android:paddingLeft="?android:attr/expandableListPreferredChildPaddingLeft" />
+            android:textColor="#ffffffff"
+            android:hint="13:44"
+            android:id="@+id/avg"/>
 
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="13:44"
-        android:textSize="@dimen/abc_text_size_small_material"
-        android:layout_weight="1"
-        android:id="@+id/ank"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="13:44"
+            android:layout_marginLeft="15dp"
+            android:textColor="#ffffffff"
+            android:layout_weight="1"
+            android:textSize="@dimen/abc_text_size_small_material"
+            android:id="@+id/ank"
+            android:paddingBottom ="10dp"/>
+
+
     </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Försenad"
+                android:layout_marginLeft="15dp"
+                android:textColor="#ffffffff"
+                android:layout_weight="1"
+                android:textSize="@dimen/abc_text_size_small_material"
+                android:id="@+id/delays"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:textColor="#ffffffff"
+                android:layout_weight="1"
+                android:textSize="@dimen/abc_text_size_small_material"
+                android:id="@+id/delayed"
+                android:paddingBottom ="10dp"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
 
 </LinearLayout>

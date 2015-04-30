@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="se.mah.k3.skaneAPI.view.BlankFragment"
+    tools:context="se.mah.k3.skaneAPI.BlankFragment"
     android:id="@+id/blank">
 
     <LinearLayout
@@ -22,6 +22,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
+                android:textColor="#ffffffff"
                 android:text="@string/fran" />
 
         <Spinner
@@ -29,9 +30,11 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:id="@+id/spinnerStations"
+            android:textColor="#ffffffff"
             android:entries = "@array/stations"
             android:prompt = "@string/spinner_title">
             </Spinner>
+
 
         </LinearLayout>
 
@@ -44,11 +47,13 @@
                 android:layout_height="wrap_content"
                 android:text="@string/till"
                 android:layout_marginLeft="4dp"
+                android:textColor="#ffffffff"
                 android:layout_marginRight="4dp"/>
             <Spinner
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textColor="#ffffffff"
                 android:id="@+id/spinnerStations2"
                 android:entries = "@array/stations"
                 android:prompt = "@string/spinner_title"
@@ -67,27 +72,24 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginLeft="40dp"
-            android:padding="3dp"
-            android:id="@+id/avg"
-            android:text="@string/avg"/>
+            android:layout_weight="5"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="4dp"
+            android:padding="4dp"
+            android:textColor="#ffffffff"
+            android:id="@+id/trafik"
+            android:text="@string/trafik"/>
+
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:layout_marginBottom="4dp"
             android:layout_weight="1"
-            android:padding="3dp"
-            android:id="@+id/ank"
-            android:text="@string/ank"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="3dp"
-            android:layout_weight="1"
-            android:id="@+id/restid"
-            android:text="@string/restid"/>
+            android:id="@+id/avgar"
+            android:textColor="#ffffffff"
+            android:text="@string/avgar"/>
 
     </LinearLayout>
 
@@ -95,13 +97,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="left|top"
-            android:divider="@android:color/holo_blue_dark"
+            android:divider="#ff4c4c4c"
             android:childDivider="@android:color/holo_blue_dark"
             android:id="@+id/expandableListView"
             android:childIndicator="@android:color/background_dark"
+            android:dividerHeight="1dp"
             android:focusableInTouchMode="false"
             android:headerDividersEnabled="false"
-            android:listSelector="#383838"
             android:longClickable="false" />
 
     </LinearLayout>
